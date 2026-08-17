@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Экспорт слов в Anki (AI)</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Anki AI">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    max-width: 520px;
+    margin: 40px auto;
+    padding: 0 16px;
+    color: #222;
+    background: #fafafa;
+  }
+  h2 { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+  p.sub { font-size: 13px; color: #888; margin-bottom: 20px; }
+  label { display: block; font-size: 13px; color: #666; margin-bottom: 6px; }
+  input[type="text"] {
+    width: 100%;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  textarea {
+    width: 100%;
+    min-height: 160px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    resize: vertical;
+    font-family: inherit;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0 20px;
+    font-size: 13px;
+    color: #888;
+  }
+  #error {
+    display: none;
+    font-size: 13px;
+    color: #c0392b;
+    margin-bottom: 12px;
+  }
+  button {
+    width: 100%;
+    height: 42px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f0f0f0;
+    cursor: pointer;
+  }
+  button:hover:not(:disabled) { background: #e6e6e6; }
+  button:active:not(:disabled) { transform: scale(0.98); }
+  button:disabled { opacity: 0.6; cursor: default; }
+  #log {
+    margin-top: 16px;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.8;
+  }
+  #log .word { color: #222; font-weight: 500; }
+  #log .ok { color: #2a7a2a; }
+  #log .fail { color: #b56a00; }
+</style>
+</head>
+<body>
+
+<h2>Экспорт слов в Anki — через ИИ</h2>
+<p class="sub">Все данные карточки (транскрипция, часть речи, перевод, значения, примеры) генерирует DeepSeek через Puter.js. Ключи не нужны — при первом запуске Puter попросит войти в свой (бесплатный) аккаунт.</p>
+
+<label for="deckname">Название колоды</label>
+<input id="deckname" type="text" value="Added manually">
+
+<label for="words">Слова через запятую</label>
+<textarea id="words"></textarea>
+
+<div class="row">
+  <span id="count">0 слов</span>
+  <span>дубли и пустые пропускаются</span>
+</div>
+
+<div id="error"></div>
+
+<button id="exportBtn">Экспорт в Anki</button>
+
+<div id="log"></div>
+
+<script src="https://js.puter.com/v2/"></script>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sql.js@1.10.2/dist/sql-wasm.js"></script>
+<script>
+const wordsEl = document.getElementById('words');
+const deckEl = document.getElementById('deckname');
+const countEl = document.getElementById('count');
+const errorEl = document.getElementById('error');
+const btn = document.getElementById('exportBtn');
+const logEl = document.getElementById('log');
+
+function parseWords(raw) {
+  const seen = new Set();
+  const out = [];
+  raw.split(',').map(w => w.trim()).filter(Boolean).forEach(w => {
+    const key = w.toLowerCase();
+    if (!seen.has(key)) { seen.add(key); out.push(w); }
+  });
+  return out;
+}
+
+function wordLabel(n) {
+  if (n === 1) return 'слово';
+  if (n >= 2 && n <= 4) return 'слова';
+  return 'слов';
+}
+
+function updateCount() {
+  const list = parseWords(wordsEl.value);
+  countEl.textContent = list.length + ' ' + wordLabel(list.length);
+  return list;
+}
+wordsEl.addEventListener('input', updateCount);
+updateCount();
+
+function logLine(text) {
+  const div = document.createElement('div');
+  div.innerHTML = text;
+  logEl.appendChild(div);
+}
+
+function escapeHtml(s) {
+  return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+async function sha1Hex(str) {
+  const enc = new TextEncoder().encode(str);
+  const buf = await crypto.subtle.digest('SHA-1', enc);
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function randGuid() {
+  const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  let out = '';
+  for (let i = 0; i < 10; i++) out += chars[Math.floor(Math.random() * chars.length)];
+  return out;
+}
+
+function buildPrompt(words) {
+  return `Ты — лексикограф. Для каждого из следующих английских слов верни точные словарные данные.
+
+Слова: ${words.join(', ')}
+
+Верни ТОЛЬКО валидный JSON-массив (без markdown, без пояснений, без обратных кавычек), один объект на слово, в том же порядке, в котором даны слова. Формат объекта:
+
+{
+  "word": "исходное слово",
+  "ipaUK": "британская транскрипция в IPA, с ударением, в слэшах, напр. /drʌg/",
+  "ipaUS": "американская (General American) транскрипция в IPA, в слэшах",
+  "partOfSpeech": "части речи через запятую, напр. \\"noun, verb\\" (только те, что реально существуют у этого слова)",
+  "translation": "основной перевод на русский, одно-два слова",
+  "translationAlt": ["альтернативный перевод 1", "альтернативный перевод 2"],
+  "senses": [
+    {"pos": "noun", "number": "1", "definition": "определение на английском, кратко, словарным стилем", "example": "пример предложения на английском или пустая строка"},
+    {"pos": "verb", "number": "1", "definition": "...", "example": "..."}
+  ]
+}
+
+Требования:
+- IPA должна быть настоящей, а не выдуманной. Если не уверен в точной транскрипции — дай наиболее общепринятый вариант.
+- В "senses" перечисли реальные значения слова (обычно 1-4), группируя по части речи если их несколько.
+- Если слово — гетероним (разное произношение для разных частей речи, напр. insult/record) — отрази оба варианта ударения в ipaUS через запятую.
+- Никакой отсебятины, только реальные словарные факты.`;
+}
+
+async function generateCardsViaAI(words) {
+  const prompt = buildPrompt(words);
+  const response = await puter.ai.chat(prompt, { model: 'deepseek/deepseek-v4-flash' });
+  let text = (response && response.message && response.message.content) ? response.message.content : String(response);
+  text = text.trim().replace(/^```json\s*/i, '').replace(/^```\s*/i, '').replace(/```\s*$/i, '');
+  return JSON.parse(text);
+}
+
+async function generateAudio(word) {
+  try {
+    const audioEl = await puter.ai.txt2speech(word, 'en-US');
+    const res = await fetch(audioEl.src);
+    if (!res.ok) return null;
+    const buf = await res.arrayBuffer();
+    return new Uint8Array(buf);
+  } catch (e) {
+    return null;
+  }
+}
+
+function formatExplanation(senses) {
+  if (!senses || !senses.length) return '';
+  const hasMultiplePos = new Set(senses.map(s => s.pos).filter(Boolean)).size > 1;
+  let lastPos = null;
+  const parts = [];
+  for (const s of senses) {
+    let block = '';
+    if (hasMultiplePos && s.pos && s.pos !== lastPos) {
+      block += '<div style="color:#888;font-weight:bold;margin-top:10px">' + escapeHtml(s.pos) + '</div>';
+      lastPos = s.pos;
+    }
+    let line = (s.number ? '<b style="color:#7c3aed">' + escapeHtml(String(s.number)) + '</b> ' : '') + escapeHtml(s.definition || '');
+    if (s.example) line += '<br><span style="color:#999;font-style:italic">' + escapeHtml(s.example) + '</span>';
+    block += line;
+    parts.push(block);
+  }
+  return parts.join('<br><br>');
+}
+
+async function buildApkg(deckName, cards, mediaFiles) {
+  const SQL = await initSqlJs({ locateFile: f => 'https://cdn.jsdelivr.net/npm/sql.js@1.10.2/dist/' + f });
+  const db = new SQL.Database();
+
+  db.run(`
+    CREATE TABLE col (id integer primary key, crt integer not null, mod integer not null, scm integer not null, ver integer not null, dty integer not null, usn integer not null, ls integer not null, conf text not null, models text not null, decks text not null, dconf text not null, tags text not null);
+    CREATE TABLE notes (id integer primary key, guid text not null, mid integer not null, mod integer not null, usn integer not null, tags text not null, flds text not null, sfld text not null, csum integer not null, flags integer not null, data text not null);
+    CREATE TABLE cards (id integer primary key, nid integer not null, did integer not null, ord integer not null, mod integer not null, usn integer not null, type integer not null, queue integer not null, due integer not null, ivl integer not null, factor integer not null, reps integer not null, lapses integer not null, left integer not null, odue integer not null, odid integer not null, flags integer not null, data text not null);
+    CREATE TABLE revlog (id integer primary key, cid integer not null, usn integer not null, ease integer not null, ivl integer not null, lastIvl integer not null, factor integer not null, time integer not null, type integer not null);
+    CREATE TABLE graves (usn integer not null, oid integer not null, type integer not null);
+    CREATE INDEX ix_notes_usn on notes (usn);
+    CREATE INDEX ix_cards_usn on cards (usn);
+    CREATE INDEX ix_revlog_usn on revlog (usn);
+    CREATE INDEX ix_cards_nid on cards (nid);
+    CREATE INDEX ix_cards_sched on cards (did, queue, due);
+    CREATE INDEX ix_notes_type on notes (mid);
+    CREATE INDEX ix_revlog_cid on revlog (cid);
+    CREATE INDEX ix_notes_csum on notes (csum);
+  `);
+
+  const now = Date.now();
+  const nowSec = Math.floor(now / 1000);
+  const crt = Math.floor(new Date().setHours(0,0,0,0) / 1000);
+  const modelId = 1607392322;
+  const deckId = 1700000000000 + Math.floor(Math.random() * 100000);
+
+  const fieldNames = ["Word", "Audio", "Transcription UK", "Transcription US", "Source", "Part of speech", "Translation", "Explanation"];
+
+  const qfmt = `{{Word}} {{Audio}}
+{{#Transcription US}}<br><span style="color:#888;font-size:20px">{{Transcription US}}</span>{{/Transcription US}}
+{{^Transcription US}}{{#Transcription UK}}<br><span style="color:#888;font-size:20px">{{Transcription UK}}</span>{{/Transcription UK}}{{/Transcription US}}
+{{#Part of speech}}<br><span style="color:#999;font-size:14px;font-style:italic">{{Part of speech}}</span>{{/Part of speech}}`;
+
+  const afmt = `{{FrontSide}}
+<hr id="answer">
+<div style="font-size:22px;font-weight:bold;margin-top:10px">{{Translation}}</div>
+<div style="text-align:left;font-size:16px;margin-top:14px">{{Explanation}}</div>
+<div style="font-size:11px;color:#aaa;margin-top:14px">{{Source}}</div>`;
+
+  const model = {
+    [modelId]: {
+      id: modelId, name: "EN vocab (AI)", type: 0, mod: nowSec, usn: -1, sortf: 0, did: deckId,
+      tmpls: [{ name: "Card 1", ord: 0, qfmt: qfmt, afmt: afmt, did: null, bafmt: "", bqfmt: "", bfont: "", bsize: 0 }],
+      flds: fieldNames.map((name, ord) => ({ name, ord, sticky: false, rtl: false, font: "Arial", size: 20, media: [] })),
+      css: ".card { font-family: arial; font-size: 20px; text-align: center; color: black; background-color: white; }",
+      latexPre: "\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n",
+      latexPost: "\\end{document}",
+      req: [[0, "any", [0]]]
+    }
+  };
+
+  const decks = {
+    "1": { id: 1, mod: 0, name: "Default", usn: 0, lrnToday: [0,0], revToday: [0,0], newToday: [0,0], timeToday: [0,0], collapsed: false, browserCollapsed: false, desc: "", dyn: 0, conf: 1, extendNew: 0, extendRev: 0 },
+    [deckId]: { id: deckId, mod: nowSec, name: deckName, usn: 0, lrnToday: [0,0], revToday: [0,0], newToday: [0,0], timeToday: [0,0], collapsed: false, browserCollapsed: false, desc: "", dyn: 0, conf: 1, extendNew: 0, extendRev: 0 }
+  };
+
+  const dconf = {
+    "1": { id: 1, mod: 0, name: "Default", usn: 0, maxTaken: 60, autoplay: true, timer: 0, replayq: true,
+      new: { bury: true, delays: [1,10], initialFactor: 2500, ints: [1,4,7], order: 1, perDay: 20 },
+      rev: { bury: true, ease4: 1.3, fuzz: 0.05, ivlFct: 1, maxIvl: 36500, minSpace: 1, perDay: 200 },
+      lapse: { delays: [10], leechAction: 1, leechFails: 8, minInt: 1, mult: 0 } }
+  };
+
+  const conf = { nextPos: 1, estTimes: true, activeDecks: [deckId], sortType: "noteFld", timeLim: 0, sortBackwards: false, addToCur: true, curDeck: deckId, newBury: true, newSpread: 0, dueCounts: true, curModel: String(modelId), collapseTime: 1200 };
+
+  db.run(
+    "INSERT INTO col (id,crt,mod,scm,ver,dty,usn,ls,conf,models,decks,dconf,tags) VALUES (1,?,?,?,11,0,0,0,?,?,?,?,'{}')",
+    [crt, now, now, JSON.stringify(conf), JSON.stringify(model), JSON.stringify(decks), JSON.stringify(dconf)]
+  );
+
+  let pos = 1;
+  for (const card of cards) {
+    const noteId = now + pos;
+    const cardId = now + 1000000 + pos;
+    const guid = randGuid();
+    const flds = card.fields.join("\x1f");
+    const sfld = card.fields[0];
+    const csumHex = (await sha1Hex(sfld)).slice(0, 8);
+    const csum = parseInt(csumHex, 16);
+
+    db.run(
+      "INSERT INTO notes (id,guid,mid,mod,usn,tags,flds,sfld,csum,flags,data) VALUES (?,?,?,?,-1,'',?,?,?,0,'')",
+      [noteId, guid, modelId, nowSec, flds, sfld, csum]
+    );
+    db.run(
+      "INSERT INTO cards (id,nid,did,ord,mod,usn,type,queue,due,ivl,factor,reps,lapses,left,odue,odid,flags,data) VALUES (?,?,?,0,?,-1,0,0,?,0,0,0,0,0,0,0,0,'')",
+      [cardId, noteId, deckId, nowSec, pos]
+    );
+    pos++;
+  }
+
+  const dbBytes = db.export();
+  db.close();
+
+  const zip = new JSZip();
+  zip.file("collection.anki2", dbBytes);
+
+  const mediaMap = {};
+  (mediaFiles || []).forEach((m, i) => {
+    mediaMap[String(i)] = m.filename;
+    zip.file(String(i), m.data);
+  });
+  zip.file("media", JSON.stringify(mediaMap));
+  const blob = await zip.generateAsync({ type: "blob" });
+  return blob;
+}
+
+btn.addEventListener('click', async () => {
+  const list = updateCount();
+  const deckName = deckEl.value.trim() || 'Added manually';
+  if (list.length === 0) {
+    errorEl.textContent = 'Добавьте хотя бы одно слово';
+    errorEl.style.display = 'block';
+    return;
+  }
+  errorEl.style.display = 'none';
+  logEl.innerHTML = '';
+  btn.disabled = true;
+  btn.textContent = 'Спрашиваю ИИ…';
+
+  let aiData;
+  try {
+    logLine('Отправляю запрос в DeepSeek через Puter…');
+    aiData = await generateCardsViaAI(list);
+    logEl.lastChild.innerHTML = 'Ответ получен: ' + aiData.length + ' карточек';
+  } catch (e) {
+    logLine('<span class="fail">Ошибка запроса к ИИ: ' + escapeHtml(e.message || String(e)) + '</span>');
+    btn.disabled = false;
+    btn.textContent = 'Экспорт в Anki';
+    return;
+  }
+
+  const cards = [];
+  const mediaFiles = [];
+  for (let i = 0; i < list.length; i++) {
+    const word = list[i];
+    const data = aiData[i] || {};
+    logLine('<span class="word">' + escapeHtml(word) + '</span>: генерирую озвучку…');
+
+    let audioTag = '';
+    const audioBytes = await generateAudio(data.word || word);
+    if (audioBytes) {
+      const filename = word.replace(/[^a-zA-Z0-9]/g, '_') + '_ai.mp3';
+      mediaFiles.push({ filename, data: audioBytes });
+      audioTag = '[sound:' + filename + ']';
+    }
+
+    let translationField = escapeHtml(data.translation || '(нет данных)');
+    if (Array.isArray(data.translationAlt) && data.translationAlt.length) {
+      translationField += '; ' + escapeHtml(data.translationAlt.join('; '));
+    }
+
+    cards.push({
+      fields: [
+        escapeHtml(data.word || word),
+        audioTag,
+        escapeHtml(data.ipaUK || ''),
+        escapeHtml(data.ipaUS || ''),
+        'Сгенерировано ИИ (DeepSeek)',
+        escapeHtml(data.partOfSpeech || ''),
+        translationField,
+        formatExplanation(data.senses)
+      ]
+    });
+
+    const lastLine = logEl.lastChild;
+    lastLine.innerHTML = '<span class="word">' + escapeHtml(word) + '</span>: ' + (data.translation ? '<span class="ok">карточка собрана' + (audioTag ? ', звук ✓' : '') + '</span>' : '<span class="fail">данные не пришли</span>');
+  }
+
+  logLine('Собираю .apkg…');
+  try {
+    const blob = await buildApkg(deckName, cards, mediaFiles);
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = deckName.replace(/[^a-zA-Zа-яА-Я0-9_\- ]/g, '').trim().replace(/\s+/g, '_') + '.apkg';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    logLine('<span class="ok">Готово — файл скачан.</span>');
+  } catch (e) {
+    logLine('<span class="fail">Ошибка сборки: ' + escapeHtml(e.message) + '</span>');
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Экспорт в Anki';
+});
+</script>
+
+</body>
+</html>
