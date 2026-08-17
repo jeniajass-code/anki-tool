@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Экспорт слов в Anki</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAKTElEQVR4nO3dSYwcVx3H8d//vequ3mbp8XjGiZ1gBxJMUGwpm5AiEFlABClCCMR2CGKREBcsgViEcolyAYkLKEgBhMIuAQfCJQTJJAI5OQSRxCG2ApExGuI4shPP1st0ddX7cyiPQfG8JI7TVW96fh/54lOXqr9T9d6rpWX/gdMg2ogpewMoXIyDvBgHeTEO8mIc5MU4yItxkBfjIC/GQV6Mg7wYB3kxDvJiHOTFOMiLcZAX4yAvxkFejIO8GAd5MQ7yYhzkxTjIi3GQF+MgL8ZBXoyDvBgHeTEO8mIc5MU4yItxkBfjIC/GQV6Mg7wYB3kxDvJiHOTFOMiLcZAX4yAvxkFeocahCgCQkjcjFAKc2yfFiQr+vNemCmPEWjjnsox5AIDCWAtr1Tk4BylopwQXh9goGw4GK0tpspYO1hgHAKhGcT2q1uLJaVuJ1WXFfGxAcYgYhXZfenFtdVHTFCJS1J9I+JLuatJZ6a+cqU20GzNzIqLqRv2hocQhIhkNOi+fTLodY61EUfGn2JCJCESg2ls8nQ76zdkdUTXWEe+iUAakqrry4sKw2zFRlP+/7C0KjyoAE0XDXmf1xf+MugyEcOQQgTGmc+qEuGGlWgF0i09SFIBCVd2G376q2ChLk86pExPzu0aaSMlxWINUzcunlpZOnIaJgIKGWiETQARx1TRrNnMbfvsqxg46y/HEdLU5qS4d0Z9TaXEYgVOcWXXzbbNvr95wx9sum6+rlrYNC1cydAf/uri0ePdp491WnVbi02WnReIAmL6Sy9VGs3RHWjLicMa9AdqrXz6lsadN9ev2DFTymYE6+O3zfcG7hcPnfzBAyeOPd9vT1SyV55jVETSwZpLUxNVRjREk+J/y94YJEOdbpq7PzVx674qgMwBUHAMeo7AGgFwajH5wrefPXR4uVW3r+xDRF02sX1nPNnWLB3FIbfoI4cR9Ae6o21/+7Xp2UmTZjAG1mCLD0LPp4DLdK5d/d239n3lu8/d98CJHTPV4SvOL6ojXe0oeirrFJGVuz/ZysuILAyr2IgA1krm1Dm967N7brx6srOWmWJ3VqFxRAZLXb3z5vp73lnNy6BXZ42ooj0Rfe/LVzlX9OpPcXGIIEmxc5u58+a6U5hQlt9CZ62kmV7z1taH3j272kttgQeP4r4iI1hd05veUZ2fNqo8m1wIgQKfeN98mmmRU/3i4lDACK69osJJyYUyIgLs3d28dDYeDF1hfRR6cDeCKy+1PGRcqLyGXdvj2anKMC3uj6voM38yLPgDx0ea6dieVnJcHX/D8ov2ReKcgbwYB3kxDvJiHOTFOMir/NsEX50qNr5bbvMTCX2ZOOg4nMIIxnjVLPA738KNIy9jqatPHBva8Tr7iSBJ9bJZ+/adkQv4MlOgceS77G/Hhgd+tPLCYmZExulZBRGoasWaL97eOHBHI9g+QozDKUTwzxeyz9+7vJboTMuMUxk5gTjFdx7otOryudvqmUOAR8cQ48gv6P/8kf5iR7dPyTAte4NGwxhMNcxP/9T72E1xq24CHH+El+u65Z6rRnAjfyC0NKqwBoMUw1DfJRDikSN3+XbbT7TdlMwFuu8uhubPZyS4ZMbUKoGOqEKMwwhU8Zlb64/8PTmykLZbMn7HDxF011QVX/1wsxELxxyvlwhUsW3C3P+lqa//ZPXJfw8rIW7mGydA6nBJ237jI61b91WdhlgGwowD633MTZn7D0ydXHRGxuqJJwEypzMTplYR58K91zrQOLDeB4BL2qHuvIsW+F344caB9dvGwhysvSnCXPs6J+g4cqHN/reOTRBHEEcOGcPp9GsKOg5df5NJCAJcwRy1cOPIv4zU4cxKcY/xbMgpJutSj2Wr9RFoHPnXsNjRQ0eSlb4alDuV1UokN1xZ2T1vt1QfgcYhgpWePnx4MBiiWv42inN49GgS2XjXbIhXyEak/B1/vnzv/+NE2htoPQ5i7dwaZE6OLAx3zsZbZ2ga7hLMWgJjwpiqnH0hO5IU2EqvIAo3jmYNWRbKAVwEWYZaRVDy6KdQIcaRB7F3VzTdMmtJoY8O+7ZnmMEa7N8Tbak6Qhxz5Bqx3LK/+tjR5Eyn1NmKwDk0Yrnxqsrc9BYajSLkOFTRqsn7r42Xe1ru16GKZk0iu+XWwcKNQ+TsCulUI4gvZKuVgZDjwPq8oOQJiwBawrsxQhB0HLnyv5XSN6AkmyCOQJY6zld+tSMWdBxBXZXd0HgPRMKNI9/vqljqOglscUEAp2jVpFoZ50u1gcaR7/GVnj56NFnqljyV3YBAFXEF119ZuXz72F6qDTSO/LGOhw8PugOtRiE+8yMGSYpDR5L37qteOjOefYS4fJ6n8Ozz6Upf41CfBlNFZADI08fTsSwDYcaR6w1gg7kqu6FzD7sGvI0XJdw46tUif5n7jRCBc6hGY7sOEmIc567KtmoyGJ79r4T0L9/I1MGpXrM7Ovf81ZgJdECqilZdbtkfHzqaLHc1wMch89nKu/ZWd20bz9Eogo0j/1ucasrt18eLqyXffb4hp2jVpcZ1jlLkV2WNYNtkiOe+3BiXgZDjQCBXZf3G/lJt0HHkxvsLCFm4R2wqHeMgL8ZBXoxjkxvlcJ1xbGZiTKUyuntdGMempSrG2LiuI1tsYRyblKhz1UbL2sroziyMY/MRCEQhqE9vwyifz2Qcm5BAM9doz0VxXV02ukcnio4j8JcrhkwEIgKIS9Nqo9WY2a7OjfShmqKXz/tJqFdKgjdIdDjM4NLG9h21qVkd/UttijtyCDB0eOxZ/pj9BXNOFXjm2OrCy5h7y+76zFwxF5yKi0MVtUieOj5MM4zrrVMjIwI8uRA1d+yJW1OaZcU8x1NcHE7RrOHx54YHDw+MjO0Pgr7p8jdOrfb1Z38eNGLJ0rSw69SFDkhVUavI9x/sLXcdwD5elzSDAPc91Dt5Josr0AJvZy40DqdoxnhmIb3rVx1rYGScf6Xr4qkizVCJ8IcnBvc+2JtuSlbs7ip6Kps6tJty8PDgnt90OmtqDDKHzEEVCv6DAqpn94kIIovfPz6459edqYYUf6At4U4wp2hU5Yd/7B1ZSL/50ea+3ZXityFo6z/CfXrZ/fhg776HepN1Y20JQ3jZf+B00Z8JAIgsOn01Ih+4rvrB6+KrL6tsmxSM9f26r00BwTDDU/8aHj6e/vIv/ZOLWbtpnJYzuSstDgDGQB06A80yzE+bZm0rd/E/TvH8S1maoVGTOELB44z/V+YNxvlodKIuAnTXdKWnCO1FHAWTswePVl3yV4CUWAZCuPs8T8RaWFv2pgQjkElc+XHkuGAaIF6yJy/GQV6Mg7wYB3kxDvJiHOTFOMiLcZAX4yAvxkFejIO8GAd5MQ7yYhzkxTjIi3GQF+MgL8ZBXoyDvBgHeTEO8mIc5MU4yItxkBfjIC/GQV6Mg7wYB3kxDvJiHOTFOMiLcZAX4yAvxkFejIO8GAd5MQ7yYhzkxTjIi3GQF+MgL8ZBXoyDvBgHeTEO8mIc5MU4yItxkBfjIC/GQV6Mg7wYB3kxDvJiHOTFOMiLcZAX4yAvxkFeocahCgCQkjcjFAKc2yfFiQr+vNemCmPEWjjnsox5AIDCWAtr1Tk4BylopwQXh9goGw4GK0tpspYO1hgHAKhGcT2q1uLJaVuJ1WXFfGxAcYgYhXZfenFtdVHTFCJS1J9I+JLuatJZ6a+cqU20GzNzIqLqRv2hocQhIhkNOi+fTLodY61EUfGn2JCJCESg2ls8nQ76zdkdUTXWEe+iUAakqrry4sKw2zFRlP+/7C0KjyoAE0XDXmf1xf+MugyEcOQQgTGmc+qEuGGlWgF0i09SFIBCVd2G376q2ChLk86pExPzu0aaSMlxWINUzcunlpZOnIaJgIKGWiETQARx1TRrNnMbfvsqxg46y/HEdLU5qS4d0Z9TaXEYgVOcWXXzbbNvr95wx9sum6+rlrYNC1cydAf/uri0ePdp491WnVbi02WnReIAmL6Sy9VGs3RHWjLicMa9AdqrXz6lsadN9ev2DFTymYE6+O3zfcG7hcPnfzBAyeOPd9vT1SyV55jVETSwZpLUxNVRjREk+J/y94YJEOdbpq7PzVx674qgMwBUHAMeo7AGgFwajH5wrefPXR4uVW3r+xDRF02sX1nPNnWLB3FIbfoI4cR9Ae6o21/+7Xp2UmTZjAG1mCLD0LPp4DLdK5d/d239n3lu8/d98CJHTPV4SvOL6ojXe0oeirrFJGVuz/ZysuILAyr2IgA1krm1Dm967N7brx6srOWmWJ3VqFxRAZLXb3z5vp73lnNy6BXZ42ooj0Rfe/LVzlX9OpPcXGIIEmxc5u58+a6U5hQlt9CZ62kmV7z1taH3j272kttgQeP4r4iI1hd05veUZ2fNqo8m1wIgQKfeN98mmmRU/3i4lDACK69osJJyYUyIgLs3d28dDYeDF1hfRR6cDeCKy+1PGRcqLyGXdvj2anKMC3uj6voM38yLPgDx0ea6dieVnJcHX/D8ov2ReKcgbwYB3kxDvJiHOTFOMir/NsEX50qNr5bbvMTCX2ZOOg4nMIIxnjVLPA738KNIy9jqatPHBva8Tr7iSBJ9bJZ+/adkQv4MlOgceS77G/Hhgd+tPLCYmZExulZBRGoasWaL97eOHBHI9g+QozDKUTwzxeyz9+7vJboTMuMUxk5gTjFdx7otOryudvqmUOAR8cQ48gv6P/8kf5iR7dPyTAte4NGwxhMNcxP/9T72E1xq24CHH+El+u65Z6rRnAjfyC0NKqwBoMUw1DfJRDikSN3+XbbT7TdlMwFuu8uhubPZyS4ZMbUKoGOqEKMwwhU8Zlb64/8PTmykLZbMn7HDxF011QVX/1wsxELxxyvlwhUsW3C3P+lqa//ZPXJfw8rIW7mGydA6nBJ237jI61b91WdhlgGwowD633MTZn7D0ydXHRGxuqJJwEypzMTplYR58K91zrQOLDeB4BL2qHuvIsW+F344caB9dvGwhysvSnCXPs6J+g4cqHN/reOTRBHEEcOGcPp9GsKOg5df5NJCAJcwRy1cOPIv4zU4cxKcY/xbMgpJutSj2Wr9RFoHPnXsNjRQ0eSlb4alDuV1UokN1xZ2T1vt1QfgcYhgpWePnx4MBiiWv42inN49GgS2XjXbIhXyEak/B1/vnzv/+NE2htoPQ5i7dwaZE6OLAx3zsZbZ2ga7hLMWgJjwpiqnH0hO5IU2EqvIAo3jmYNWRbKAVwEWYZaRVDy6KdQIcaRB7F3VzTdMmtJoY8O+7ZnmMEa7N8Tbak6Qhxz5Bqx3LK/+tjR5Eyn1NmKwDk0Yrnxqsrc9BYajSLkOFTRqsn7r42Xe1ru16GKZk0iu+XWwcKNQ+TsCulUI4gvZKuVgZDjwPq8oOQJiwBawrsxQhB0HLnyv5XSN6AkmyCOQJY6zld+tSMWdBxBXZXd0HgPRMKNI9/vqljqOglscUEAp2jVpFoZ50u1gcaR7/GVnj56NFnqljyV3YBAFXEF119ZuXz72F6qDTSO/LGOhw8PugOtRiE+8yMGSYpDR5L37qteOjOefYS4fJ6n8Ozz6Upf41CfBlNFZADI08fTsSwDYcaR6w1gg7kqu6FzD7sGvI0XJdw46tUif5n7jRCBc6hGY7sOEmIc567KtmoyGJ79r4T0L9/I1MGpXrM7Ovf81ZgJdECqilZdbtkfHzqaLHc1wMch89nKu/ZWd20bz9Eogo0j/1ucasrt18eLqyXffb4hp2jVpcZ1jlLkV2WNYNtkiOe+3BiXgZDjQCBXZf3G/lJt0HHkxvsLCFm4R2wqHeMgL8ZBXoxjkxvlcJ1xbGZiTKUyuntdGMempSrG2LiuI1tsYRyblKhz1UbL2sroziyMY/MRCEQhqE9vwyifz2Qcm5BAM9doz0VxXV02ukcnio4j8JcrhkwEIgKIS9Nqo9WY2a7OjfShmqKXz/tJqFdKgjdIdDjM4NLG9h21qVkd/UttijtyCDB0eOxZ/pj9BXNOFXjm2OrCy5h7y+76zFwxF5yKi0MVtUieOj5MM4zrrVMjIwI8uRA1d+yJW1OaZcU8x1NcHE7RrOHx54YHDw+MjO0Pgr7p8jdOrfb1Z38eNGLJ0rSw69SFDkhVUavI9x/sLXcdwD5elzSDAPc91Dt5Josr0AJvZy40DqdoxnhmIb3rVx1rYGScf6Xr4qkizVCJ8IcnBvc+2JtuSlbs7ip6Kps6tJty8PDgnt90OmtqDDKHzEEVCv6DAqpn94kIIovfPz6459edqYYUf6At4U4wp2hU5Yd/7B1ZSL/50ea+3ZXityFo6z/CfXrZ/fhg776HepN1Y20JQ3jZf+B00Z8JAIgsOn01Ih+4rvrB6+KrL6tsmxSM9f26r00BwTDDU/8aHj6e/vIv/ZOLWbtpnJYzuSstDgDGQB06A80yzE+bZm0rd/E/TvH8S1maoVGTOELB44z/V+YNxvlodKIuAnTXdKWnCO1FHAWTswePVl3yV4CUWAZCuPs8T8RaWFv2pgQjkElc+XHkuGAaIF6yJy/GQV6Mg7wYB3kxDvJiHOTFOMiLcZAX4yAvxkFejIO8GAd5MQ7yYhzkxTjIi3GQF+MgL8ZBXoyDvBgHeTEO8mIc5MU4yItxkBfjIC/GQV6Mg7wYB3kxDvJiHOTFOMiLcZAX4yAvxkFejIO8GAd5MQ7yYhzkxTjIi3GQF+MgL8ZBXoyDvBgHeTEO8mIc5MU4yItxkBfjIC/GQV6Mg7wYB3kxDvJiHOTFOMiLcZAX4yAvxkFeocahCgCQkjcjFAKc2yfFiQr+vNemCmPEWjjnsox5AIDCWAtr1Tk4BylopwQXh9goGw4GK0tpspYO1hgHAKhGcT2q1uLJaVuJ1WXFfGxAcYgYhXZfenFtdVHTFCJS1J9I+JLuatJZ6a+cqU20GzNzIqLqRv2hocQhIhkNOi+fTLodY61EUfGn2JCJCESg2ls8nQ76zdkdUTXWEe+iUAakqrry4sKw2zFRlP+/7C0KjyoAE0XDXmf1xf+MugyEcOQQgTGmc+qEuGGlWgF0i09SFIBCVd2G376q2ChLk86pExPzu0aaSMlxWINUzcunlpZOnIaJgIKGWiETQARx1TRrNnMbfvsqxg46y/HEdLU5qS4d0Z9TaXEYgVOcWXXzbbNvr95wx9sum6+rlrYNC1cydAf/uri0ePdp491WnVbi02WnReIAmL6Sy9VGs3RHWjLicMa9AdqrXz6lsadN9ev2DFTymYE6+O3zfcG7hcPnfzBAyeOPd9vT1SyV55jVETSwZpLUxNVRjREk+J/y94YJEOdbpq7PzVx674qgMwBUHAMeo7AGgFwajH5wrefPXR4uVW3r+xDRF02sX1nPNnWLB3FIbfoI4cR9Ae6o21/+7Xp2UmTZjAG1mCLD0LPp4DLdK5d/d239n3lu8/d98CJHTPV4SvOL6ojXe0oeirrFJGVuz/ZysuILAyr2IgA1krm1Dm967N7brx6srOWmWJ3VqFxRAZLXb3z5vp73lnNy6BXZ42ooj0Rfe/LVzlX9OpPcXGIIEmxc5u58+a6U5hQlt9CZ62kmV7z1taH3j272kttgQeP4r4iI1hd05veUZ2fNqo8m1wIgQKfeN98mmmRU/3i4lDACK69osJJyYUyIgLs3d28dDYeDF1hfRR6cDeCKy+1PGRcqLyGXdvj2anKMC3uj6voM38yLPgDx0ea6dieVnJcHX/D8ov2ReKcgbwYB3kxDvJiHOTFOMir/NsEX50qNr5bbvMTCX2ZOOg4nMIIxnjVLPA738KNIy9jqatPHBva8Tr7iSBJ9bJZ+/adkQv4MlOgceS77G/Hhgd+tPLCYmZExulZBRGoasWaL97eOHBHI9g+QozDKUTwzxeyz9+7vJboTMuMUxk5gTjFdx7otOryudvqmUOAR8cQ48gv6P/8kf5iR7dPyTAte4NGwxhMNcxP/9T72E1xq24CHH+El+u65Z6rRnAjfyC0NKqwBoMUw1DfJRDikSN3+XbbT7TdlMwFuu8uhubPZyS4ZMbUKoGOqEKMwwhU8Zlb64/8PTmykLZbMn7HDxF011QVX/1wsxELxxyvlwhUsW3C3P+lqa//ZPXJfw8rIW7mGydA6nBJ237jI61b91WdhlgGwowD633MTZn7D0ydXHRGxuqJJwEypzMTplYR58K91zrQOLDeB4BL2qHuvIsW+F344caB9dvGwhysvSnCXPs6J+g4cqHN/reOTRBHEEcOGcPp9GsKOg5df5NJCAJcwRy1cOPIv4zU4cxKcY/xbMgpJutSj2Wr9RFoHPnXsNjRQ0eSlb4alDuV1UokN1xZ2T1vt1QfgcYhgpWePnx4MBiiWv42inN49GgS2XjXbIhXyEak/B1/vnzv/+NE2htoPQ5i7dwaZE6OLAx3zsZbZ2ga7hLMWgJjwpiqnH0hO5IU2EqvIAo3jmYNWRbKAVwEWYZaRVDy6KdQIcaRB7F3VzTdMmtJoY8O+7ZnmMEa7N8Tbak6Qhxz5Bqx3LK/+tjR5Eyn1NmKwDk0Yrnxqsrc9BYajSLkOFTRqsn7r42Xe1ru16GKZk0iu+XWwcKNQ+TsCulUI4gvZKuVgZDjwPq8oOQJiwBawrsxQhB0HLnyv5XSN6AkmyCOQJY6zld+tSMWdBxBXZXd0HgPRMKNI9/vqljqOglscUEAp2jVpFoZ50u1gcaR7/GVnj56NFnqljyV3YBAFXEF119ZuXz72F6qDTSO/LGOhw8PugOtRiE+8yMGSYpDR5L37qteOjOefYS4fJ6n8Ozz6Upf41CfBlNFZADI08fTsSwDYcaR6w1gg7kqu6FzD7sGvI0XJdw46tUif5n7jRCBc6hGY7sOEmIc567KtmoyGJ79r4T0L9/I1MGpXrM7Ovf81ZgJdECqilZdbtkfHzqaLHc1wMch89nKu/ZWd20bz9Eogo0j/1ucasrt18eLqyXffb4hp2jVpcZ1jlLkV2WNYNtkiOe+3BiXgZDjQCBXZf3G/lJt0HHkxvsLCFm4R2wqHeMgL8ZBXoxjkxvlcJ1xbGZiTKUyuntdGMempSrG2LiuI1tsYRyblKhz1UbL2sroziyMY/MRCEQhqE9vwyifz2Qcm5BAM9doz0VxXV02ukcnio4j8JcrhkwEIgKIS9Nqo9WY2a7OjfShmqKXz/tJqFdKgjdIdDjM4NLG9h21qVkd/UttijtyCDB0eOxZ/pj9BXNOFXjm2OrCy5h7y+76zFwxF5yKi0MVtUieOj5MM4zrrVMjIwI8uRA1d+yJW1OaZcU8x1NcHE7RrOHx54YHDw+MjO0Pgr7p8jdOrfb1Z38eNGLJ0rSw69SFDkhVUavI9x/sLXcdwD5elzSDAPc91Dt5Josr0AJvZy40DqdoxnhmIb3rVx1rYGScf6Xr4qkizVCJ8IcnBvc+2JtuSlbs7ip6Kps6tJty8PDgnt90OmtqDDKHzEEVCv6DAqpn94kIIovfPz6459edqYYUf6At4U4wp2hU5Yd/7B1ZSL/50ea+3ZXityFo6z/CfXrZ/fhg776HepN1Y20JQ3jZf+B00Z8JAIgsOn01Ih+4rvrB6+KrL6tsmxSM9f26r00BwTDDU/8aHj6e/vIv/ZOLWbtpnJYzuSstDgDGQB06A80yzE+bZm0rd/E/TvH8S1maoVGTOELB44z/V+YNxvlodKIuAnTXdKWnCO1FHAWTswePVl3yV4CUWAZCuPs8T8RaWFv2pgQjkElc+XHkuGAaIF6yJy/GQV6Mg7wYB3kxDvJiHOTFOMiLcZAX4yAvxkFejIO8GAd5MQ7yYhzkxTjIi3GQF+MgL8ZBXoyDvBgHeTEO8mIc5MU4yItxkBfjIC/GQV6Mg7wYB3kxDvJiHOTFOMiLcZAX4yAvxkFejIO8GAd5MQ7yYhzkxTjIi3GQF+MgL8ZBXoyDvBgHeTEO8mIc5MU4yItxkBfjIC/GQV6Mg7wYB3kxDvJiHOTFOMiLcZAX4yAvxkFe/wVIG8spgetW3AAAAABJRU5ErkJggg==">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Anki экспорт">
 <style>
   * { box-sizing: border-box; }
   body {
@@ -78,12 +81,12 @@
 <body>
 
 <h2>Экспорт слов в Anki</h2>
-<p class="sub">Собирает .apkg прямо в браузере: IPA, определение (Free Dictionary API) и перевод (MyMemory) подтягиваются автоматически.</p>
+<p class="sub">Word / Transcription UK+US / Source / Part of speech / Translation / Explanation.</p>
 
 <label for="deckname">Название колоды</label>
 <input id="deckname" type="text" value="Added manually">
 
-<label for="mwkey">Merriam-Webster API key (необязательно, но рекомендуется)</label>
+<label for="mwkey">Merriam-Webster Dictionary API key (необязательно, но рекомендуется)</label>
 <input id="mwkey" type="text" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx">
 
 <label for="words">Слова через запятую</label>
@@ -109,6 +112,15 @@ const countEl = document.getElementById('count');
 const errorEl = document.getElementById('error');
 const btn = document.getElementById('exportBtn');
 const logEl = document.getElementById('log');
+const mwkeyEl = document.getElementById('mwkey');
+
+try {
+  const savedKey = localStorage.getItem('mw_api_key');
+  if (savedKey) mwkeyEl.value = savedKey;
+} catch (e) {}
+mwkeyEl.addEventListener('input', () => {
+  try { localStorage.setItem('mw_api_key', mwkeyEl.value.trim()); } catch (e) {}
+});
 
 function parseWords(raw) {
   const seen = new Set();
@@ -131,75 +143,123 @@ function updateCount() {
   countEl.textContent = list.length + ' ' + wordLabel(list.length);
   return list;
 }
-const mwkeyEl = document.getElementById('mwkey');
-try {
-  const savedKey = localStorage.getItem('mw_api_key');
-  if (savedKey) mwkeyEl.value = savedKey;
-} catch (e) {}
-mwkeyEl.addEventListener('input', () => {
-  try { localStorage.setItem('mw_api_key', mwkeyEl.value.trim()); } catch (e) {}
-});
-
 wordsEl.addEventListener('input', updateCount);
 updateCount();
 
-function logLine(text, cls) {
+function logLine(text) {
   const div = document.createElement('div');
   div.innerHTML = text;
-  if (cls) div.className = cls;
   logEl.appendChild(div);
 }
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-async function fetchDictionaryOnce(word) {
-  const res = await fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + encodeURIComponent(word));
-  if (!res.ok) throw new Error('status ' + res.status);
-  const data = await res.json();
-  const entry = data[0];
-  let ipa = '';
-  if (entry.phonetic) ipa = entry.phonetic;
-  else if (entry.phonetics) {
-    const withText = entry.phonetics.find(p => p.text);
-    if (withText) ipa = withText.text;
-  }
-  let definition = '';
-  let example = '';
-  if (entry.meanings && entry.meanings.length) {
-    const defs = entry.meanings[0].definitions;
-    if (defs && defs.length) {
-      definition = defs[0].definition || '';
-      example = defs[0].example || '';
-    }
-  }
-  return { ipa, definition, example };
+function isCleanRussian(s) {
+  return /^[А-Яа-яЁё\s\-,]+$/.test(s.trim());
 }
 
-async function fetchDictionaryFallback(word) {
+function looksUntranslated(original, translated) {
+  if (!translated) return true;
+  if (!isCleanRussian(translated)) return true;
+  return original.trim().toLowerCase() === translated.trim().toLowerCase();
+}
+
+async function fetchMyMemory(word) {
   try {
-    const res = await fetch('https://api.datamuse.com/words?sp=' + encodeURIComponent(word) + '&md=d&max=1');
-    if (!res.ok) return null;
+    const res = await fetch('https://api.mymemory.translated.net/get?q=' + encodeURIComponent(word) + '&langpair=en|ru');
+    if (!res.ok) return { primary: '', alternates: [] };
     const data = await res.json();
-    if (!data.length || !data[0].defs || !data[0].defs.length) return null;
-    const raw = data[0].defs[0];
-    const definition = raw.includes('\t') ? raw.split('\t')[1] : raw;
-    return { ipa: '', definition: definition || '', example: '' };
+    const primary = (data.responseData && data.responseData.translatedText) ? data.responseData.translatedText : '';
+    let alternates = [];
+    if (Array.isArray(data.matches)) {
+      alternates = data.matches
+        .filter(m => m.translation && isCleanRussian(m.translation) && (m.match === undefined || m.match >= 0.85))
+        .sort((a, b) => (b.quality || 0) - (a.quality || 0))
+        .map(m => m.translation.trim());
+    }
+    return { primary, alternates };
   } catch (e) {
-    return null;
+    return { primary: '', alternates: [] };
   }
+}
+
+async function fetchGoogleTranslate(word) {
+  try {
+    const res = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=ru&dt=t&q=' + encodeURIComponent(word));
+    if (!res.ok) return '';
+    const data = await res.json();
+    if (data && data[0] && data[0][0] && data[0][0][0]) return data[0][0][0];
+    return '';
+  } catch (e) {
+    return '';
+  }
+}
+
+async function fetchTranslation(word) {
+  const mm = await fetchMyMemory(word);
+  let primary = mm.primary;
+  if (looksUntranslated(word, primary)) {
+    primary = await fetchGoogleTranslate(word);
+  }
+  if (looksUntranslated(word, primary)) return { primary: '', alternates: [] };
+
+  const seen = new Set([primary.trim().toLowerCase()]);
+  const alternates = [];
+  for (const alt of mm.alternates) {
+    const key = alt.toLowerCase();
+    if (seen.has(key) || key === word.trim().toLowerCase()) continue;
+    seen.add(key);
+    alternates.push(alt);
+    if (alternates.length >= 2) break;
+  }
+  return { primary, alternates };
+}
+
+function mwLink(word, displayText) {
+  const href = 'https://www.merriam-webster.com/dictionary/' + encodeURIComponent(word.trim().toLowerCase());
+  return '<a href="' + href + '" style="color:#2f6feb;text-decoration:none">' + displayText + '</a>';
+}
+
+function normalizeBc(s) {
+  return s.replace(/\{bc\}/g, ': ');
 }
 
 function cleanMwText(s) {
   if (!s) return '';
-  return s
-    .replace(/\{bc\}/g, '; ')
-    .replace(/\{sx\|([^|}]*)\|[^}]*\}/g, '$1')
+  return normalizeBc(s)
+    .replace(/\{(?:sx|dxt|dx|ma)\|([^|:}]*)[^}]*\}/g, (m, w) => mwLink(w, w.toUpperCase()))
     .replace(/\{a_link\|([^}]*)\}/g, '$1')
-    .replace(/\{\\\/[a-z_]+\}/g, '')
-    .replace(/\{[a-z_]+\}/g, '')
-    .replace(/^\s*;\s*/, '')
+    .replace(/\{d_link\|([^|}]*)[^}]*\}/g, '$1')
+    .replace(/\{i_link\|([^|}]*)[^}]*\}/g, '$1')
+    .replace(/\{et_link\|([^|}]*)[^}]*\}/g, '$1')
+    .replace(/\{\/?[a-zA-Z_]+\}/g, '')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+function extractMwDt(dtArr) {
+  const rawPieces = [];
+  let example = '';
+  if (dtArr) {
+    for (const dtItem of dtArr) {
+      if (dtItem[0] === 'text') {
+        rawPieces.push(dtItem[1] || '');
+      }
+      if (dtItem[0] === 'vis' && Array.isArray(dtItem[1]) && dtItem[1].length && !example) {
+        example = cleanMwText(dtItem[1][0].t);
+      }
+    }
+  }
+  let combined = rawPieces.join(' ');
+
+  const crossRefs = [];
+  combined = combined.replace(/\b(compare|see)\b\s*\{(?:dxt|dx|sx|ma)\|([^|:}]*)[^}]*\}(\{\/[a-zA-Z_]+\})?/gi, (m, verb, w) => {
+    crossRefs.push(verb.charAt(0).toUpperCase() + verb.slice(1).toLowerCase() + ' ' + mwLink(w, w.toUpperCase()));
+    return '';
+  });
+
+  const text = cleanMwText(combined);
+  return { text, example, crossRefs };
 }
 
 async function fetchMerriamWebster(word, key) {
@@ -209,18 +269,138 @@ async function fetchMerriamWebster(word, key) {
     if (!res.ok) return null;
     const data = await res.json();
     if (!Array.isArray(data) || !data.length || typeof data[0] === 'string') return null;
-    const first = data[0];
-    const definition = (first.shortdef && first.shortdef.length) ? first.shortdef[0] : '';
-    if (!definition) return null;
-    let example = '';
-    if (first.suppl && first.suppl.examples && first.suppl.examples.length) {
-      example = cleanMwText(first.suppl.examples[0].t);
+
+    const entries = data.filter(e => e && e.meta && e.meta.id &&
+      e.meta.id.split(':')[0].toLowerCase() === word.toLowerCase());
+    if (!entries.length) return null;
+
+    const posList = [];
+    const senses = [];
+    for (const entry of entries) {
+      const pos = entry.fl || '';
+      if (pos && !posList.includes(pos)) posList.push(pos);
+      if (!entry.def) continue;
+      for (const defBlock of entry.def) {
+        const vd = defBlock.vd || '';
+        if (!defBlock.sseq) continue;
+        for (const group of defBlock.sseq) {
+          for (const item of group) {
+            let senseData = null;
+            if (item[0] === 'sense') senseData = item[1];
+            else if (item[0] === 'bs' && item[1] && item[1].sense) senseData = item[1].sense;
+            if (!senseData) continue;
+
+            const sn = (senseData.sn || '').replace(/\s+/g, '');
+            const { text, example, crossRefs } = extractMwDt(senseData.dt);
+            if (text) senses.push({ pos, vd, sn, text, example, crossRefs });
+
+            if (senseData.sdsense) {
+              const { text: text2, example: example2 } = extractMwDt(senseData.sdsense.dt);
+              if (text2) {
+                const sd = senseData.sdsense.sd || '';
+                senses.push({ pos, vd, sn: sn + (sd ? ' (' + sd + ')' : ''), text: text2, example: example2 });
+              }
+            }
+          }
+        }
+      }
     }
-    let mwPron = '';
-    if (first.hwi && first.hwi.prs && first.hwi.prs.length && first.hwi.prs[0].mw) {
-      mwPron = first.hwi.prs[0].mw;
+    if (!senses.length) return null;
+
+    let source = 'https://www.merriam-webster.com/dictionary/' + encodeURIComponent(word);
+    return { pos: posList.join(', '), senses, source };
+  } catch (e) {
+    return null;
+  }
+}
+
+let ipaUSPromise = null, ipaUKPromise = null;
+
+async function loadIpaDict(url) {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) return new Map();
+    const text = await res.text();
+    const map = new Map();
+    for (const line of text.split('\n')) {
+      const tab = line.indexOf('\t');
+      if (tab === -1) continue;
+      const word = line.slice(0, tab).trim().toLowerCase();
+      const prons = line.slice(tab + 1).trim();
+      if (!word || !prons) continue;
+      const first = prons.split(',')[0].trim();
+      if (!map.has(word)) map.set(word, first);
     }
-    return { definition, example, mwPron };
+    return map;
+  } catch (e) {
+    return new Map();
+  }
+}
+
+function getIpaUS() {
+  if (!ipaUSPromise) ipaUSPromise = loadIpaDict('https://raw.githubusercontent.com/open-dict-data/ipa-dict/master/data/en_US.txt');
+  return ipaUSPromise;
+}
+function getIpaUK() {
+  if (!ipaUKPromise) ipaUKPromise = loadIpaDict('https://raw.githubusercontent.com/open-dict-data/ipa-dict/master/data/en_UK.txt');
+  return ipaUKPromise;
+}
+
+async function fetchDictionaryOnce(word) {
+  const res = await fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + encodeURIComponent(word));
+  if (!res.ok) throw new Error('status ' + res.status);
+  const data = await res.json();
+  const entry = data[0];
+
+  let ukIpa = '', usIpa = '';
+  const usPattern = /(^|[-_])us([-_.]|$)/i;
+  const ukPattern = /(^|[-_])(uk|gb)([-_.]|$)/i;
+  const unclaimed = [];
+  if (entry.phonetics) {
+    for (const p of entry.phonetics) {
+      if (!p.text) continue;
+      const audioName = (p.audio || '').split('/').pop();
+      if (usPattern.test(audioName)) { if (!usIpa) usIpa = p.text; }
+      else if (ukPattern.test(audioName)) { if (!ukIpa) ukIpa = p.text; }
+      else unclaimed.push(p.text);
+    }
+  }
+  // Entries with no region-tagged audio: Wiktionary conventionally lists
+  // British pronunciation first, so use any leftovers to fill UK, then US
+  for (const text of unclaimed) {
+    if (!ukIpa) { ukIpa = text; continue; }
+    if (!usIpa) { usIpa = text; continue; }
+  }
+  if (!ukIpa && entry.phonetic) ukIpa = entry.phonetic;
+
+  const posSet = [];
+  const senses = [];
+  if (entry.meanings) {
+    for (const meaning of entry.meanings) {
+      const mpos = meaning.partOfSpeech || '';
+      if (mpos && !posSet.includes(mpos)) posSet.push(mpos);
+      for (const d of (meaning.definitions || [])) {
+        senses.push({ text: escapeHtml(d.definition || ''), example: escapeHtml(d.example || ''), pos: mpos });
+      }
+    }
+  }
+  const pos = posSet.join(', ');
+  const source = (entry.sourceUrls && entry.sourceUrls.length) ? entry.sourceUrls[0] : ('https://api.dictionaryapi.dev/api/v2/entries/en/' + encodeURIComponent(word));
+
+  return { ukIpa, usIpa, pos, senses, source };
+}
+
+async function fetchDictionaryFallback(word) {
+  try {
+    const res = await fetch('https://api.datamuse.com/words?sp=' + encodeURIComponent(word) + '&md=d&max=1');
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (!data.length || !data[0].defs || !data[0].defs.length) return null;
+    const senses = data[0].defs.slice(0, 3).map(raw => {
+      const definition = raw.includes('\t') ? raw.split('\t')[1] : raw;
+      return { text: escapeHtml(definition || ''), example: '' };
+    });
+    return { ukIpa: '', usIpa: '', pos: '', senses, source: '' };
   } catch (e) {
     return null;
   }
@@ -239,47 +419,8 @@ async function fetchDictionary(word) {
   return await fetchDictionaryFallback(word);
 }
 
-function looksUntranslated(original, translated) {
-  if (!translated) return true;
-  const a = original.trim().toLowerCase();
-  const b = translated.trim().toLowerCase();
-  return a === b;
-}
-
-async function fetchMyMemory(word) {
-  try {
-    const res = await fetch('https://api.mymemory.translated.net/get?q=' + encodeURIComponent(word) + '&langpair=en|ru');
-    if (!res.ok) return '';
-    const data = await res.json();
-    return (data.responseData && data.responseData.translatedText) ? data.responseData.translatedText : '';
-  } catch (e) {
-    return '';
-  }
-}
-
-async function fetchGoogleTranslate(word) {
-  try {
-    const res = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=ru&dt=t&q=' + encodeURIComponent(word));
-    if (!res.ok) return '';
-    const data = await res.json();
-    if (data && data[0] && data[0][0] && data[0][0][0]) return data[0][0][0];
-    return '';
-  } catch (e) {
-    return '';
-  }
-}
-
-async function fetchTranslation(word) {
-  let translated = await fetchMyMemory(word);
-  if (looksUntranslated(word, translated)) {
-    translated = await fetchGoogleTranslate(word);
-  }
-  if (looksUntranslated(word, translated)) return '';
-  return translated;
-}
-
 function escapeHtml(s) {
-  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
 async function sha1Hex(str) {
@@ -288,15 +429,38 @@ async function sha1Hex(str) {
   return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
-function stripHtml(s) {
-  return s.replace(/<[^>]*>/g, '');
-}
-
 function randGuid() {
   const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
   let out = '';
   for (let i = 0; i < 10; i++) out += chars[Math.floor(Math.random() * chars.length)];
   return out;
+}
+
+function formatExplanation(senses) {
+  if (!senses || !senses.length) return '';
+  const hasMultiplePos = new Set(senses.map(s => s.pos).filter(Boolean)).size > 1;
+  let lastPos = null, lastVd = null;
+  const parts = [];
+  for (const s of senses) {
+    let block = '';
+    if (hasMultiplePos && s.pos && s.pos !== lastPos) {
+      block += '<div style="color:#888;font-weight:bold;margin-top:10px">' + escapeHtml(s.pos) + '</div>';
+      lastPos = s.pos;
+      lastVd = null;
+    }
+    if (s.vd && s.vd !== lastVd) {
+      block += '<div style="color:#999;font-style:italic;font-size:14px;margin-top:6px">' + escapeHtml(s.vd) + '</div>';
+      lastVd = s.vd;
+    }
+    let line = (s.sn ? s.sn + ' ' : '') + s.text;
+    if (s.example) line += '<br><span style="color:#999;font-style:italic">' + s.example + '</span>';
+    if (s.crossRefs && s.crossRefs.length) {
+      line += '<br><span style="color:#7a99c9;font-size:14px">→ ' + s.crossRefs.join('; ') + '</span>';
+    }
+    block += line;
+    parts.push(block);
+  }
+  return parts.join('<br><br>');
 }
 
 async function buildApkg(deckName, cards) {
@@ -322,17 +486,27 @@ async function buildApkg(deckName, cards) {
   const now = Date.now();
   const nowSec = Math.floor(now / 1000);
   const crt = Math.floor(new Date().setHours(0,0,0,0) / 1000);
-  const modelId = 1607392319;
+  const modelId = 1607392321;
   const deckId = 1700000000000 + Math.floor(Math.random() * 100000);
+
+  const fieldNames = ["Word", "Transcription UK", "Transcription US", "Source", "Part of speech", "Translation", "Explanation"];
+
+  const qfmt = `{{Word}}
+{{#Transcription US}}<br><span style="color:#888;font-size:20px">{{Transcription US}}</span>{{/Transcription US}}
+{{^Transcription US}}{{#Transcription UK}}<br><span style="color:#888;font-size:20px">{{Transcription UK}}</span>{{/Transcription UK}}{{/Transcription US}}
+{{#Part of speech}}<br><span style="color:#999;font-size:14px;font-style:italic">{{Part of speech}}</span>{{/Part of speech}}`;
+
+  const afmt = `{{FrontSide}}
+<hr id="answer">
+<div style="font-size:22px;font-weight:bold;margin-top:10px">{{Translation}}</div>
+<div style="text-align:left;font-size:16px;margin-top:14px">{{Explanation}}</div>
+<div style="font-size:11px;color:#aaa;margin-top:14px">{{Source}}</div>`;
 
   const model = {
     [modelId]: {
-      id: modelId, name: "Basic (EN vocab)", type: 0, mod: nowSec, usn: -1, sortf: 0, did: deckId,
-      tmpls: [{ name: "Card 1", ord: 0, qfmt: "{{Front}}", afmt: "{{FrontSide}}<hr id=\"answer\">{{Back}}", did: null, bafmt: "", bqfmt: "", bfont: "", bsize: 0 }],
-      flds: [
-        { name: "Front", ord: 0, sticky: false, rtl: false, font: "Arial", size: 20, media: [] },
-        { name: "Back", ord: 1, sticky: false, rtl: false, font: "Arial", size: 20, media: [] }
-      ],
+      id: modelId, name: "EN vocab (detailed)", type: 0, mod: nowSec, usn: -1, sortf: 0, did: deckId,
+      tmpls: [{ name: "Card 1", ord: 0, qfmt: qfmt, afmt: afmt, did: null, bafmt: "", bqfmt: "", bfont: "", bsize: 0 }],
+      flds: fieldNames.map((name, ord) => ({ name, ord, sticky: false, rtl: false, font: "Arial", size: 20, media: [] })),
       css: ".card { font-family: arial; font-size: 20px; text-align: center; color: black; background-color: white; }",
       latexPre: "\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n",
       latexPost: "\\end{document}",
@@ -364,8 +538,8 @@ async function buildApkg(deckName, cards) {
     const noteId = now + pos;
     const cardId = now + 1000000 + pos;
     const guid = randGuid();
-    const flds = card.front + "\x1f" + card.back;
-    const sfld = stripHtml(card.front);
+    const flds = card.fields.join("\x1f");
+    const sfld = card.fields[0];
     const csumHex = (await sha1Hex(sfld)).slice(0, 8);
     const csum = parseInt(csumHex, 16);
 
@@ -404,28 +578,54 @@ btn.addEventListener('click', async () => {
   btn.disabled = true;
   btn.textContent = 'Собираю карточки…';
 
+  logLine('Загружаю словари транскрипций…');
+  const [ipaUSMap, ipaUKMap] = await Promise.all([getIpaUS(), getIpaUK()]);
+  logEl.lastChild.innerHTML = 'Словари транскрипций: US ' + ipaUSMap.size + ' слов, UK ' + ipaUKMap.size + ' слов' + (ipaUSMap.size === 0 || ipaUKMap.size === 0 ? ' <span class="fail">(загрузка не удалась)</span>' : '');
+
   const cards = [];
+
   for (const word of list) {
     logLine('<span class="word">' + escapeHtml(word) + '</span>: ищу данные…');
-    const [dict, translation, mw] = await Promise.all([fetchDictionary(word), fetchTranslation(word), fetchMerriamWebster(word, mwKey)]);
+    const [dict, translation, mw] = await Promise.all([
+      fetchDictionary(word),
+      fetchTranslation(word),
+      fetchMerriamWebster(word, mwKey)
+    ]);
 
-    const ipa = (dict && dict.ipa) ? dict.ipa : (mw && mw.mwPron ? mw.mwPron : '');
-    const definition = (mw && mw.definition) ? mw.definition : (dict && dict.definition ? dict.definition : '');
-    const example = (mw && mw.example) ? mw.example : (dict && dict.example ? dict.example : '');
-    const ru = translation || '(перевод не найден)';
+    const wordLower = word.trim().toLowerCase();
+    const ukIpa = ipaUKMap.get(wordLower) || (dict && dict.ukIpa) || '';
+    const usIpa = ipaUSMap.get(wordLower) || (dict && dict.usIpa) || ukIpa;
+    const pos = (mw && mw.pos) ? mw.pos : (dict && dict.pos ? dict.pos : '');
+    const senses = (mw && mw.senses && mw.senses.length) ? mw.senses : (dict && dict.senses ? dict.senses : []);
+    const source = (mw && mw.source) ? mw.source : (dict && dict.source ? dict.source : '');
 
-    let front = escapeHtml(word);
-    if (ipa) front += '<br><span style="color:#888;font-size:24px">' + escapeHtml(ipa) + '</span>';
-    if (definition) front += '<br><span style="color:#aaa;font-size:20px;font-style:italic">' + escapeHtml(definition) + '</span>';
+    let translationField = '';
+    if (translation.primary) {
+      translationField = escapeHtml(translation.primary);
+      if (translation.alternates.length) {
+        translationField += '; ' + escapeHtml(translation.alternates.join('; '));
+      }
+    } else {
+      translationField = '(перевод не найден)';
+    }
 
-    let back = '<b>' + escapeHtml(ru) + '</b>';
-    if (example) back += '<br><br>' + escapeHtml(example);
+    const explanation = formatExplanation(senses);
 
-    cards.push({ front, back });
+    cards.push({
+      fields: [
+        escapeHtml(word),
+        escapeHtml(ukIpa),
+        escapeHtml(usIpa),
+        escapeHtml(source),
+        escapeHtml(pos),
+        translationField,
+        explanation
+      ]
+    });
 
-    const source = mw && mw.definition ? 'Merriam-Webster' : (dict && dict.definition ? 'Free Dictionary' : null);
+    const source_label = mw && mw.senses && mw.senses.length ? 'Merriam-Webster' : (dict && dict.senses && dict.senses.length ? 'Free Dictionary' : null);
     const lastLine = logEl.lastChild;
-    lastLine.innerHTML = '<span class="word">' + escapeHtml(word) + '</span>: ' + (source ? '<span class="ok">данные найдены (' + source + ')</span>' : '<span class="fail">словарь не ответил, только слово + перевод</span>');
+    lastLine.innerHTML = '<span class="word">' + escapeHtml(word) + '</span>: ' + (source_label ? '<span class="ok">данные найдены (' + source_label + ')</span>' : '<span class="fail">словарь не ответил, только слово + перевод</span>');
   }
 
   logLine('Собираю .apkg…');
